@@ -1,0 +1,15 @@
+group_type,group,value
+crop,GRAPES,9426.0
+crop,ALFALFA,4227.0
+crop,ALMOND,1347.0
+year,2018,3000.0
+year,2019,3000.0
+year,2020,3000.0
+year,2021,3000.0
+year,2022,3000.0
+crop_fraction_stat,mean,0.6045707741101582
+crop_fraction_stat,std,0.1759356157376727
+crop_fraction_stat,min,0.30012643337249756
+crop_fraction_stat,median,0.5984027087688446
+crop_fraction_stat,max,0.9994479417800903
+total,all_patches,15000.0

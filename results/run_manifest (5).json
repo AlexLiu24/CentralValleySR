@@ -1,0 +1,153 @@
+{
+  "created_at": "2026-08-24T05:01:15",
+  "project_root": "/content",
+  "python": "3.13.15",
+  "torch": "2.13.0+cu130",
+  "seed": 42,
+  "device": "cuda",
+  "aoi_bbox": [
+    -122.0,
+    38.0,
+    -121.0,
+    38.5
+  ],
+  "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "band_order": [
+    "B4",
+    "B3",
+    "B2",
+    "B8"
+  ],
+  "red_idx": 0,
+  "nir_idx": 3,
+  "cloudy_pixel_percentage_max": 60,
+  "keep_scl_classes": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "scl_7_note": "SCL 7 is unclassified/low-probability cloud, retained for coverage; residual contamination disclosed as a limitation",
+  "ndvi_reduce_scale_m": 60,
+  "baseline_ndvi_unit": "per-scene regional mean over crop-masked pixels (not monthly medians)",
+  "sr_composite_window": "06-01 to 09-30 median composite",
+  "crop_coverage_threshold": 0.3,
+  "crop_coverage_threshold_note": "applies to the union of target crop classes, not a single crop",
+  "min_dominant_crop_fraction": 0.3,
+  "sr_claim_excluded_crops": [
+    "CITRUS"
+  ],
+  "sr_claim_exclusion_reasons": {
+    "CITRUS": "zero SR patches in the generated pair set (CDL citrus effectively absent from this AOI); retained in the baseline NDVI analysis only"
+  },
+  "sr_absent_target_crops": [
+    "CITRUS"
+  ],
+  "patch_size_hr": 128,
+  "patch_size_lr": 32,
+  "scale_factor": 4,
+  "use_cached_pairs": false,
+  "pairs_source_dir": "/content/data_pairs/sr_pairs_x4",
+  "baseline_data_source": "cached_csv:/content/results/baseline_ndvi_all_crops.csv",
+  "sr_pair_data_source": "cached_real_npz:/content/data_pairs/sr_pairs_x4 (15000 files)",
+  "paper_ready": true,
+  "notes": [],
+  "package_versions": {
+    "earthengine-api": "1.7.39",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0",
+    "scikit-image": "0.25.2",
+    "scipy": "1.16.3",
+    "torch": "2.13.0",
+    "torchvision": "0.26.0+cu128"
+  },
+  "year_labels_source": "cached_csv:/content/results/annual_precipitation_labels.csv",
+  "year_precip_groups": {
+    "2018": "higher-precipitation",
+    "2019": "higher-precipitation",
+    "2020": "lower-precipitation",
+    "2021": "higher-precipitation",
+    "2022": "lower-precipitation"
+  },
+  "precip_grouping_method": "annual PRISM precipitation vs the 2018-2022 study-period mean; relative grouping, not a climatological drought index",
+  "baseline_n_scene_observations": 1979,
+  "baseline_inferential_tests": "none - removed; scene-level observations are temporally autocorrelated and successive years are not independent replicates. Descriptive means, SDs, differences and counts only.",
+  "baseline_precipitation_comparison_basis": "annual means (results/baseline_ndvi_annual_summary.csv); each year weighted equally, so years contributing more Sentinel-2 scenes do not dominate the group mean",
+  "baseline_scene_level_summary_role": "reference only (results/baseline_ndvi_summary.csv); scene-weighted, not the reported precipitation comparison",
+  "detected_scale": 4,
+  "input_channels": 4,
+  "hr_patch": 128,
+  "lr_patch": 32,
+  "num_pair_files": 15000,
+  "audit_n_unique_filenames": 15000,
+  "audit_n_unique_coordinates": 14919,
+  "audit_n_duplicate_coordinate_groups": 81,
+  "audit_band_order_plausible_fraction": 1.0,
+  "audit_lr_matches_4x_avg_hr_fraction": 1.0,
+  "audit_reflectance_in_range_fraction": 1.0,
+  "audit_total_nonfinite_values": 0,
+  "audit_n_invalid_patches": 0,
+  "audit_lr_match_enforced_in_validity": true,
+  "audit_n_valid_patches": 15000,
+  "manifest_details_csv": "/content/results/manifest_details.csv",
+  "manifest_details_rows": 15000,
+  "manifest_metadata_from_npz": 15000,
+  "manifest_metadata_from_ee_lookup": 0,
+  "split_strategy": "temporal",
+  "split_underrepresented_crops_in_test_year": [],
+  "sr_target_crops": [
+    "ALFALFA",
+    "ALMOND",
+    "CITRUS",
+    "GRAPES"
+  ],
+  "sr_present_target_crops": [
+    "ALFALFA",
+    "ALMOND",
+    "GRAPES"
+  ],
+  "sr_absent_target_crops_undeclared": [],
+  "sr_crop_patch_totals": {
+    "ALFALFA": 4228,
+    "ALMOND": 1347,
+    "CITRUS": 0,
+    "GRAPES": 9425
+  },
+  "sr_results_scope": "aggregate agricultural patches; crop breakdowns are dominant-crop-LABELLED and cover ALFALFA, ALMOND, GRAPES only",
+  "split_strategy_used": "temporal",
+  "num_train_files": 9000,
+  "num_val_files": 3000,
+  "num_test_files": 3000,
+  "num_train_patches_used": 9000,
+  "num_val_patches_used": 3000,
+  "num_test_patches_used": 3000,
+  "batch_size": 16,
+  "figure_example_selection_rule": "median_psnr",
+  "figure_example_files": [
+    "S2_2022_m121.36885_38.22869.npz",
+    "S2_2022_m121.55222_38.39907.npz",
+    "S2_2022_m121.45160_38.08071.npz"
+  ],
+  "sr_crop_table_is_dominant_crop_labeled": true,
+  "sr_crop_table_caveat": "rows are dominant-crop-LABELLED patches, not pure single-crop patches: crop_label is the dominant target crop, while the 30% threshold applies to the combined cover of all target crops",
+  "sr_crops_reported_in_test": [
+    "ALFALFA",
+    "ALMOND",
+    "GRAPES"
+  ],
+  "sr_crops_absent_from_test": [
+    "CITRUS"
+  ],
+  "sr_thin_crops_in_test": [],
+  "readiness_stage": "post_freeze",
+  "readiness_problems": [],
+  "frozen_artifact_count": 26,
+  "manuscript_reconciliation_csv": "/content/frozen_artifacts/manuscript_reconciliation.csv"
+}
