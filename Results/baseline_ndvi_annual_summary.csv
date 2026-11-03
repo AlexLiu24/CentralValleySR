@@ -1,0 +1,5 @@
+crop,higher_precip_annual_mean,higher_precip_sd_across_years,lower_precip_annual_mean,lower_precip_sd_across_years,difference,percent_change,n_years_higher,n_years_lower,n_scenes_higher,n_scenes_lower,weighting
+ALFALFA,0.5675994617165246,0.022018644214895248,0.5540307336581272,0.0013147055732310228,-0.013568728058397483,-2.390546322465347,3,2,310,228,"annual means, each year weighted equally (reported comparison)"
+ALMOND,0.4790428841015583,0.02454711732480231,0.46015243137003914,0.045999492859671996,-0.01889045273151918,-3.9433740398728805,3,2,309,228,"annual means, each year weighted equally (reported comparison)"
+CITRUS,0.5395789291058957,0.12736457849921717,0.44014502493847985,0.044254575678173216,-0.09943390416741582,-18.428055434296123,3,2,148,218,"annual means, each year weighted equally (reported comparison)"
+GRAPES,0.4298625370049806,0.016697605539644167,0.38362047706148317,0.054405281093094414,-0.04624205994349745,-10.757406371274838,3,2,310,228,"annual means, each year weighted equally (reported comparison)"
